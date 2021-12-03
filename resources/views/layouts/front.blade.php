@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!--    Document Title-->
-        <title>Web GIS PTPN 12</title>
+        <title>Web GIS PDP Jember</title>
 
         <!--    Favicons-->
         <link rel="apple-touch-icon" sizes="180x180" href="{{asset('img/favicon/Untitled-1.png')}}">
@@ -37,7 +37,7 @@
             <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
                 <div class="container">
                     <a href="/" class="navbar-brand d-flex align-items-center fw-bold fs-2">
-                        <div>PTPN 12</div>
+                        <div>PDP Jember</div>
                     </a>
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">

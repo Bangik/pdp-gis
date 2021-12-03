@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Admin - PTPN 12</title>
+    <title>Admin - PDP Jember</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -58,10 +58,10 @@
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="/">Admin PTPN 12</a>
+                        <a href="/">Admin PDP Jember</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="/">PTPN</a>
+                        <a href="/">PDP</a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">Menu</li>

@@ -9,7 +9,7 @@
         <div class="col-lg-12 col-md-12 col-12 col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Peta Kerja PTPN 12</h4>
+                    <h4>Peta Kerja PDP Jember</h4>
                 </div>
                 <div class="card-body">
                     <div id="map" style="width: 100%; height: 500px;"></div>
