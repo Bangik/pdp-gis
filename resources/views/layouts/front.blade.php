@@ -62,8 +62,11 @@
             <div class="row">
                 <div class="col">
                     <nav>
-                        <a class="d-inline-block m-r-auto" href="events_layout.html"><img alt="" class="img-fluid"
-                                src="../assets/images/logo/1.png"></a>
+                        <a class="d-flex align-items-center m-r-auto" href="events_layout.html"><img alt=""
+                                style="width: 70px; height:70px" class="img-fluid"
+                                src="../front/images/logo/1.png">
+                            <h2 class="text-white font-weight-normal">PDP Jember</h2>
+                        </a>
                         <div class="responsive-btn">
                             <a class="toggle-nav" href="#">
                                 <i class="fa fa-bars text-white"></i>
@@ -605,8 +608,7 @@
     <script src="{{ asset('front/js/isotope.min.js') }}"></script>
     <script src="{{ asset('front/js/portfolio.js') }}"></script>
 
-    <!--typed js-->
-    <script src="{{ asset('front/js/typed.min.js') }}"></script>
+    <!--typed js--
 
     <!--owl js-->
     <script src="{{ asset('front/js/owl.carousel.min.js') }}"></script>
@@ -614,20 +616,11 @@
     <!--AOS js-->
     <script src="{{ asset('front/js/aos.js') }}"></script>
 
-    <!--AOS js-->
-    <script src="{{ asset('front/js/typed.js') }}"></script>
-
     <!--tilt js-->
     <script src="{{ asset('front/js/vanilla-tilt.min.js') }}"></script>
 
-    <!-- counter js-->
-    <script src="{{ asset('front/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('front/js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('front/js/count-down.js') }}"></script>
-
     <!-- script js-->
     <script src="{{ asset('front/js/main.js') }}"></script>
-    <script src="{{ asset('front/js/counters.js') }}"></script>
     <script src="{{ asset('front/js/zoom-gallery.js') }}"></script>
     <script src="{{ asset('front/js/script3.js') }}"></script>
     <script src="{{ asset('front/js/layout-fix.js') }}"></script>
