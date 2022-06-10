@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function index(){
         $dataFarms = Farm::all();
         $dataCommodities = Commodity::all();
-        // dd($dataMap);
+        
         return view('admin.dashboard', compact('dataFarms', 'dataCommodities'));
     }
 }
