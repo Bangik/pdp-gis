@@ -1,0 +1,14 @@
+.header3.bg {
+    background-image: url('https://balicabdriver.com/wp-content/uploads/coffee-tree-spices-garden.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    animation: none !important;
+}
+
+.text-color-secondary {
+    color: var(--secondaryColor) !important;
+}
+
+.text-color-primary {
+    color: var(--primaryColor) !important;
+}

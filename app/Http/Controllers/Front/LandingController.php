@@ -15,7 +15,7 @@ class LandingController extends Controller
         $dataFarms = Farm::all();
         $dataCommodities = Commodity::all();
 
-        return view('front.index-leaflet', compact('dataFarms', 'dataCommodities'));
+        return view('front.index');
     }
 
     public function viewGoogle()

@@ -11,32 +11,32 @@
     <title>PDP Jember</title>
 
     <!-- Fav icon -->
-    <link href="../assets/images/logo/favicon.png" rel="shortcut icon">
+    <link href="{{ asset('front/images/logo/favicon.png') }}"" rel=" shortcut icon">
 
     <!-- Font Family-->
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800" rel="stylesheet">
 
     <!--bootstrap css-->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('front/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
 
     <!-- color css -->
-    <link href="../assets/css/color-3.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('front/css/color-3.css') }}" rel="stylesheet" type="text/css">
 
     <!--owl carousel css-->
-    <link href="../assets/css/owl.carousel.min.css" rel="stylesheet">
-    <link href="../assets/css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="{{ asset('front/css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('front/css/owl.theme.default.min.css') }}" rel="stylesheet">
 
     <!-- Icons -->
-    <link href="../assets/css/fontawesome.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/themify.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('front/css/fontawesome.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('front/css/themify.css') }}" rel="stylesheet" type="text/css">
 
     <!-- flat Icons -->
-    <link href="../assets/css/flaticon.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('front/css/flaticon.css') }}" rel="stylesheet" type="text/css">
 
     <!--magnific popup css-->
-    <link href="../assets/css/magnific-popup.css" rel="stylesheet">
-    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link href="{{ asset('front/css/magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ asset('front/css/custom.css') }}" rel="stylesheet">
 </head>
 
 <body class="event" data-offset="50" data-spy="scroll" data-target=".navbar">
@@ -590,47 +590,47 @@
     <!-- Tap on Ends-->
 
     <!-- latest jquery-->
-    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="{{ asset('front/js/jquery-3.3.1.min.js') }}"></script>
 
     <!-- popper js-->
-    <script src="../assets/js/popper.min.js"></script>
+    <script src="{{ asset('front/js/popper.min.js') }}"></script>
 
     <!-- Bootstrap js-->
-    <script src="../assets/js/bootstrap.js"></script>
+    <script src="{{ asset('front/js/bootstrap.js') }}"></script>
     <!--  costamizer option -->
-    <script src="../assets/js/custamizer-option.js"></script>
+    <script src="{{ asset('front/js/custamizer-option.js') }}"></script>
 
     <!--magnific popup js-->
-    <script src="../assets/js/magnific-popup.js"></script>
-    <script src="../assets/js/isotope.min.js"></script>
-    <script src="../assets/js/portfolio.js"></script>
+    <script src="{{ asset('front/js/magnific-popup.js') }}"></script>
+    <script src="{{ asset('front/js/isotope.min.js') }}"></script>
+    <script src="{{ asset('front/js/portfolio.js') }}"></script>
 
     <!--typed js-->
-    <script src="../assets/js/typed.min.js"></script>
+    <script src="{{ asset('front/js/typed.min.js') }}"></script>
 
     <!--owl js-->
-    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="{{ asset('front/js/owl.carousel.min.js') }}"></script>
 
     <!--AOS js-->
-    <script src="../assets/js/aos.js"></script>
+    <script src="{{ asset('front/js/aos.js') }}"></script>
 
     <!--AOS js-->
-    <script src="../assets/js/typed.js"></script>
+    <script src="{{ asset('front/js/typed.js') }}"></script>
 
     <!--tilt js-->
-    <script src="../assets/js/vanilla-tilt.min.js"></script>
+    <script src="{{ asset('front/js/vanilla-tilt.min.js') }}"></script>
 
     <!-- counter js-->
-    <script src="../assets/js/jquery.counterup.min.js"></script>
-    <script src="../assets/js/jquery.waypoints.min.js"></script>
-    <script src="../assets/js/count-down.js"></script>
+    <script src="{{ asset('front/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('front/js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('front/js/count-down.js') }}"></script>
 
     <!-- script js-->
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/counters.js"></script>
-    <script src="../assets/js/zoom-gallery.js"></script>
-    <script src="../assets/js/script3.js"></script>
-    <script src="../assets/js/layout-fix.js"></script>
+    <script src="{{ asset('front/js/main.js') }}"></script>
+    <script src="{{ asset('front/js/counters.js') }}"></script>
+    <script src="{{ asset('front/js/zoom-gallery.js') }}"></script>
+    <script src="{{ asset('front/js/script3.js') }}"></script>
+    <script src="{{ asset('front/js/layout-fix.js') }}"></script>
 
 </body>
 
