@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Commodity;
+use App\Models\Block;
+use App\Models\Section;
 use App\Models\Farm;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,9 @@ class HomeController extends Controller
 
     public function index(){
         $dataFarms = Farm::all();
-        $dataCommodities = Commodity::all();
+        $dataSections = Section::all();
+        $dataBlocks = Block::all();
         
-        return view('admin.dashboard', compact('dataFarms', 'dataCommodities'));
+        return view('admin.dashboard', compact('dataFarms', 'dataSections', 'dataBlocks'));
     }
 }

@@ -62,9 +62,9 @@
             <div class="row">
                 <div class="col">
                     <nav>
-                        <a class="d-flex align-items-center m-r-auto" href="events_layout.html"><img alt=""
+                        <a class="d-flex align-items-center m-r-auto" href="{{route('landing')}}"><img alt=""
                                 style="width: 70px; height:70px" class="img-fluid"
-                                src="../front/images/logo/1.png">
+                                src="{{asset('front/images/logo/1.png')}}">
                             <h2 class="text-white font-weight-normal">PDP Jember</h2>
                         </a>
                         <div class="responsive-btn">
@@ -79,106 +79,22 @@
                                 </a>
                             </div>
                             <ul class="main-menu">
-                                <li><a class="dropdown" href="#">home</a>
-                                    <ul>
-                                        <li><a href="agency_layout.html">agency</a></li>
-                                        <li><a href="index.html">app landing 1</a></li>
-                                        <li><a href="app_landing_layout.html">app landing 2</a></li>
-                                        <li><a href="events_layout.html">event</a></li>
-                                        <li><a href="gym_layout.html">gym</a></li>
-                                        <li><a href="music_layout.html">music</a></li>
-                                        <li><a href="resume_layout.html">resume</a></li>
-                                        <li><a href="sass_modern_layout.html">saas1</a></li>
-                                        <li><a href="sass_layout.html">saas2</a></li>
-                                        <li><a href="wedding_layout.html">wedding</a></li>
-                                        <li><a href="yoga_layout.html">yoga</a></li>
-                                        <li><a href="ecommerce_layout.html">Ecommerce</a></li>
-                                        <li><a href="portfolio-metro.html">portfolio-metro</a></li>
-                                    </ul>
+                                <li><a href="{{route('landing')}}">Beranda</a>
                                 </li>
-                                <li><a class="dropdown" href="#">blog</a>
+                                <li><a class="dropdown" href="{{route('about.me')}}">Tentang Kami</a>
                                     <ul>
 
-                                        <li class="sub-menu"><a class="sub-menu-title" href="#">blog grid view</a>
-                                            <ul>
-                                                <li><a href="blog-leftsidebar.html">left sidebar</a></li>
-                                                <li><a href="blog-rightsidebar.html">Right sidebar</a></li>
-                                                <li><a href="blog-nosidebar.html">No sidebar</a></li>
-
-                                                <li><a href="blog-full-width-left-sidebar.html">full width left
-                                                        sidebar</a></li>
-                                                <li><a href="blog-full-width-right-sidebar.html">full width right
-                                                        sidebar</a></li>
-                                                <li><a href="blog-full-width-nosidebar.html">full width no sidebar</a>
-                                                </li>
-                                            </ul>
+                                        <li><a href="{{route('about.history')}}">Sejarah Perusahaan</a>
                                         </li>
 
-                                        <li class="sub-menu"><a class="sub-menu-title" href="#">blog List view</a>
-                                            <ul>
-
-                                                <li><a href="blog-list-leftsidebar.html">Left sidebar</a></li>
-                                                <li><a href="blog-list-rightsidebar.html">Right sidebar</a></li>
-                                                <li><a href="blog-list-nosidebar.html">No sidebar</a></li>
-
-                                            </ul>
+                                        <li><a href="#">Profil Perusahaan</a>
                                         </li>
 
-                                        <li class="sub-menu"><a class="sub-menu-title" href="#">blog List
-                                                Creative</a>
-                                            <ul>
-                                                <li><a href="blog-creative-left-sidebar.html">left sidebar</a>
-                                                </li>
-                                                <li><a href="blog-creative-right-sidebar.html">right sidebar</a>
-                                                </li>
-                                                <li><a href="blog-creative-no-sidebar.html">No sidebar</a>
-                                                </li>
-                                            </ul>
+                                        <li><a href="#">Visi dan Misi</a>
                                         </li>
 
-                                        <li class="sub-menu"><a class="sub-menu-title" href="#">blog mix
-                                                layout</a>
-                                            <ul>
-                                                <li><a href="blog-list-mix-left-sidebar.html">List mix with Left
-                                                        sidebar</a></li>
-                                                <li><a href="blog-list-mix-right-sidebar.html">List mix with right
-                                                        sidebar</a></li>
-                                                <li><a href="blog-list-mix-no-sidebar.html">List mix with no sidebar</a>
-                                                </li>
-                                                <li><a href="blog-list-full-width-no-sidebar.html">List full width no
-                                                        sidebar</a></li>
-                                                <li><a href="blog-grid-mix-with-right-sidebar.html">grid mix with right
-                                                        sidebar</a></li>
-                                                <li><a href="blog-list-post-full-width-no-sidebar.html">grid mix with no
-                                                        sidebar</a></li>
-                                            </ul>
+                                        <li><a href="#">Struktur Organisasi</a>
                                         </li>
-
-                                        <li class="sub-menu"><a class="sub-menu-title" href="#">blog details</a>
-                                            <ul>
-                                                <li><a href="blog-detail-left-sidebar.html">Left sidebar</a></li>
-                                                <li><a href="blog-detail.html">Right sidebar</a></li>
-                                                <li><a href="blog-detail-no-sidebar.html">No sidebar</a></li>
-                                                <li><a href="blog-detail-gallery.html">gallery layout</a></li>
-                                                <li><a href="blog-detail-video.html">Video layout</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="sub-menu"><a class="sub-menu-title" href="#">blog masonry</a>
-                                            <ul>
-                                                <li><a href="blog-masonry-left-side.html">2 columns</a></li>
-                                                <li><a href="blog-masonry-full-3-col.html">3 columns</a></li>
-                                                <li><a href="blog-masonry-full-4-col.html">4 columns</a></li>
-                                                <li><a href="blog-masonry-left-side.html">left columns</a></li>
-                                                <li><a href="blog-masonry-right-side.html">right sidebar</a></li>
-                                                <li><a href="blog-masonry-no-side.html"> no sidebar</a></li>
-                                                <li><a href="blog-list-full-width-no-sidebar.html">Grid list mix</a>
-                                                </li>
-                                                <li><a href="blog-list-mix-no-sidebar.html">Grid list creative mix</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
                                     </ul>
                                 </li>
                                 <li>
@@ -548,6 +464,77 @@
 
     @yield('content')
 
+    <!--contact section start-->
+    <footer class="event contact set-relative bg bg-img bg-about p-b-0" id="contact">
+        <div class="container p-b-150">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="title title3">
+                        <div class="main-title">
+                            <h2 class=" text-white">Contact Us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 offset-xl-1 col-md-6 p-r-0 map">
+                    <div class="iframe-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63188.13033977106!2d113.66835714537842!3d-8.176728543344032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd694039f257609%3A0xf79a03b5dca1bed6!2sPerusahaan%20Daerah%20Perkebunan!5e0!3m2!1sen!2sid!4v1654831630669!5m2!1sen!2sid"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63188.13033977106!2d113.66835714537842!3d-8.176728543344032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd694039f257609%3A0xf79a03b5dca1bed6!2sPerusahaan%20Daerah%20Perkebunan!5e0!3m2!1sen!2sid!4v1654831630669!5m2!1sen!2sid"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63188.13033977106!2d113.66835714537842!3d-8.176728543344032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd694039f257609%3A0xf79a03b5dca1bed6!2sPerusahaan%20Daerah%20Perkebunan!5e0!3m2!1sen!2sid!4v1654831630669!5m2!1sen!2sid"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-xl-5 p-l-0 col-md-6 set-z-index form-footer">
+                    <div class="bg-white">
+
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name">Name *</label>
+                                        <input class="form-control" id="name" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="Phone">Phone *</label>
+                                        <input class="form-control" id="Phone" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="Email">Email *</label>
+                                        <input class="form-control" id="Email" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="Subject">Subject *</label>
+                                        <input class="form-control" id="Subject" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Message">Message *</label>
+                                <input class="form-control" id="Message" type="text">
+                            </div>
+
+                            <a class="btn btn-default primary-btn m-0-auto">send</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img alt="" class="set-abs top-0 plane2" src="../front/images/event/footer/2.png">
+        <img alt="" class="set-abs bottom-0 plane" src="../front/images/event/footer/1.png">
+    </footer>
+    <!--contact section end-->
+    
     <!--copyright section start-->
     <div class="event copyright flex">
         <div class="container-fluid">
@@ -578,7 +565,7 @@
                         </ul>
                     </div>
                 </dclass>
-                s <div class="col-md-6">
+                <div class="col-md-6">
                     <p class="copyright-text text-right text-white">© 2019 PDP Jember. All Rights Reserved </p>
                 </div>
             </div>

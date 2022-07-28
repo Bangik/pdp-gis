@@ -3,25 +3,25 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Commodity;
+use App\Models\Section;
 use App\Models\Farm;
 use Illuminate\Http\Request;
 
-class CommodityController extends Controller
+class SectionController extends Controller
 {
     public function index()
     {
-        $dataCommodities = Commodity::all();
+        $dataSections = Section::all();
         $dataFarms = Farm::all();
 
-        return view('admin.commodity.index', compact('dataCommodities', 'dataFarms'));
+        return view('admin.section.index', compact('dataSections', 'dataFarms'));
     }
 
     public function create()
     {
         $dataFarms = Farm::all();
 
-        return view('admin.commodity.create', compact('dataFarms'));
+        return view('admin.section.create', compact('dataFarms'));
     }
 
     public function store(Request $request)
@@ -30,25 +30,24 @@ class CommodityController extends Controller
             'farm_id' => 'required',
             'name' => 'required|string|max:255',
             'area' => 'required',
-            'geojson_data' => 'required',
             'color' => 'required|string|max:10',
         ]);
 
         $data = $request->all();
         // dd($data);
-        Commodity::create($data);
+        Section::create($data);
 
         toastr()->success('Data berhasil ditambahkan');
 
-        return redirect()->route('commodity.index');
+        return redirect()->route('section.index');
     }
 
     public function edit($id)
     {
-        $dataCommodity = Commodity::findOrFail($id);
+        $dataSection = Section::findOrFail($id);
         $dataFarms = Farm::all();
 
-        return view('admin.commodity.edit', compact('dataCommodity', 'dataFarms'));
+        return view('admin.section.edit', compact('dataSection', 'dataFarms'));
     }
 
     public function update(Request $request, $id)
@@ -57,25 +56,30 @@ class CommodityController extends Controller
             'farm_id' => 'required',
             'name' => 'required|string|max:255',
             'area' => 'required',
-            'geojson_data' => 'required',
             'color' => 'required|string|max:10',
         ]);
 
         $data = $request->all();
         // dd($data);
-        Commodity::findOrFail($id)->update($data);
+        Section::findOrFail($id)->update($data);
 
         toastr()->success('Data berhasil diubah');
 
-        return redirect()->route('commodity.index');
+        return redirect()->route('section.index');
     }
 
     public function destroy($id)
     {
-        Commodity::findOrFail($id)->delete();
+        Section::findOrFail($id)->delete();
 
         toastr()->success('Data berhasil dihapus');
 
-        return redirect()->route('commodity.index');
+        return redirect()->route('section.index');
+    }
+
+    public function getSection(Request $request)
+    {
+        $data = Section::where('farm_id', $request->query('id'))->get(['id', 'name']);
+        return response()->json($data);
     }
 }

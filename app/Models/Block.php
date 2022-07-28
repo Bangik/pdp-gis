@@ -5,19 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Commodity extends Model
+class Block extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'farm_id',
+        'section_id',
         'name',
+        'slug',
+        'description',
+        'latitude',
+        'longitude',
         'area',
-        'geojson_data',
-        'color'
+        'elevation',
     ];
 
-    public function farm()
+    public function section()
     {
-        return $this->belongsTo(Farm::class);
+        return $this->belongsTo(Section::class);
     }
 }

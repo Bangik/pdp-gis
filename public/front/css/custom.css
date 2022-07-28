@@ -12,3 +12,14 @@
 .text-color-primary {
     color: var(--primaryColor) !important;
 }
+
+.breadcrumb-section:not(.breadcrumb-left),.breadcrumb-section:not(.breadcrumb-right),.breadcrumb-section:not(.breadcrumb-slider){
+    background:url('../images/event/breadcrumb.jpg') !important;
+    background-position:center !important;
+    background-size:cover !important;
+    background-blend-mode:overlay !important;
+}
+
+.single_blog_item .blog-text .blog-head {
+    margin-top: 0px !important;
+}

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCommoditiesTable extends Migration
+class CreateSectionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateCommoditiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('commodities', function (Blueprint $table) {
+        Schema::create('sections', function (Blueprint $table) {
             $table->id();
             $table->foreignId('farm_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('name', 50);
             $table->integer('area')->nullable();
-            $table->text('geojson_data');
+            $table->double('latitude')->nullable();
+            $table->double('longitude')->nullable();
+            $table->integer('elevation')->nullable();
+            $table->text('geojson_data')->nullable();
             $table->string('color', 10)->nullable();
             $table->timestamps();
         });
@@ -31,6 +34,6 @@ class CreateCommoditiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('commodities');
+        Schema::dropIfExists('sections');
     }
 }

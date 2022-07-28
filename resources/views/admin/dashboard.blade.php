@@ -73,16 +73,32 @@
 
     @endforeach
 
-    @foreach ($dataCommodities as $dataCommodity)
-        L.geoJSON(<?= $dataCommodity->geojson_data ?>,{
+    @foreach ($dataSections as $dataSection)
+    @if ($dataSection->geojson_data != null && $dataSection->geojson_data != '')
+        L.geoJSON(<?= $dataSection->geojson_data ?>,{
             style: {
                 color: 'white',
-                fillColor: '{{$dataCommodity->color}}',
+                fillColor: '{{$dataSection->color}}',
                 fillOpacity: 0.5,
             }
-        }).addTo(map).bindPopup("{{$dataCommodity->name}}");
-
+        }).addTo(map).bindPopup("{{$dataSection->name}}");
+    @endif
     @endforeach
-        
+    
+    let popupContent = "";
+    @foreach ($dataBlocks as $dataBlock)
+    @if ($dataBlock->latitude != null && $dataBlock->latitude != '' && $dataBlock->longitude != null && $dataBlock->longitude != '')
+        popupContent = `
+        <b>{{$dataBlock->name}}</b><br>
+        {{$dataBlock->section->name}} <br>
+        Luas {{$dataBlock->area}} Ha<br>
+        Ketinggian {{$dataBlock->elevation}} MDPL <br>
+        Deskripsi {{Str::limit($dataBlock->description, 10)}}`;
+
+        L.marker([<?= $dataBlock->latitude ?>, <?= $dataBlock->longitude ?>]).addTo(map)
+        .bindPopup(popupContent)
+        .openPopup();
+    @endif
+    @endforeach
 </script>
 @endsection

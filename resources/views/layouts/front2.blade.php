@@ -42,7 +42,7 @@
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
-                            <li class="nav-item"><a class="nav-link fw-medium active" href="{{route('landing')}}">Map Leaflet</a></li>
+                            <li class="nav-item"><a class="nav-link fw-medium active" href="{{route('view.leaflet')}}">Map Leaflet</a></li>
                             <li class="nav-item"><a class="nav-link fw-medium" href="{{route('view.google')}}">Map Google</a></li>
                         </ul>                     
                     </div>

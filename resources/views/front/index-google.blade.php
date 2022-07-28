@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.front2')
 
 @section('front-content')
 <div class="bg-holder" style="background-image:url({{asset('img/illustrations/hero-bg.png')}});background-position:bottom;background-size:cover;"></div>

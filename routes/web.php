@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Front\LandingController;
-use App\Http\Controllers\Admin\CommodityController;
+use App\Http\Controllers\Admin\SectionController;
+use App\Http\Controllers\Admin\BlockController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,10 @@ use App\Http\Controllers\Admin\CommodityController;
 */
 
 Route::get('/', [LandingController::class, 'index'])->name('landing');
+Route::get('/tentang-kami', [LandingController::class, 'about'])->name('about.me');
+Route::get('/tentang-kami/sejarah-perusahaan', [LandingController::class, 'history'])->name('about.history');
+Route::get('/tentang-kami/profil-perusahaan', [LandingController::class, 'profile'])->name('about.profile');
+Route::get('/map-leaflet', [LandingController::class, 'viewLeaflet'])->name('view.leaflet');
 Route::get('/map-google', [LandingController::class, 'viewGoogle'])->name('view.google');
 
 Auth::routes();
@@ -40,12 +45,20 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/farm/update/{id}', [FarmController::class, 'update'])->name('farm.update');
         Route::get('/farm/delete/{id}', [FarmController::class, 'destroy'])->name('farm.delete');
 
-        Route::get('/commodity/index', [CommodityController::class, 'index'])->name('commodity.index');
-        Route::get('/commodity/create', [CommodityController::class, 'create'])->name('commodity.create');
-        Route::post('/commodity/store', [CommodityController::class, 'store'])->name('commodity.store');
-        Route::get('/commodity/edit/{id}', [CommodityController::class, 'edit'])->name('commodity.edit');
-        Route::post('/commodity/update/{id}', [CommodityController::class, 'update'])->name('commodity.update');
-        Route::get('/commodity/delete/{id}', [CommodityController::class, 'destroy'])->name('commodity.delete');
+        Route::get('/section/get-section', [SectionController::class, 'getSection'])->name('section.getSection');
+        Route::get('/section/index', [SectionController::class, 'index'])->name('section.index');
+        Route::get('/section/create', [SectionController::class, 'create'])->name('section.create');
+        Route::post('/section/store', [SectionController::class, 'store'])->name('section.store');
+        Route::get('/section/edit/{id}', [SectionController::class, 'edit'])->name('section.edit');
+        Route::post('/section/update/{id}', [SectionController::class, 'update'])->name('section.update');
+        Route::get('/section/delete/{id}', [SectionController::class, 'destroy'])->name('section.delete');
+
+        Route::get('/block/index', [BlockController::class, 'index'])->name('block.index');
+        Route::get('/block/create', [BlockController::class, 'create'])->name('block.create');
+        Route::post('/block/store', [BlockController::class, 'store'])->name('block.store');
+        Route::get('/block/edit/{id}', [BlockController::class, 'edit'])->name('block.edit');
+        Route::post('/block/update/{id}', [BlockController::class, 'update'])->name('block.update');
+        Route::get('/block/delete/{id}', [BlockController::class, 'destroy'])->name('block.delete');
     });
 });
 

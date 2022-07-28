@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.front.app')
 @section('content')
     <!-- header Start-->
     <section class="event header" id="home">
@@ -296,8 +296,8 @@
                 <div class="col-md-3 col-sm-6 speker-container">
                     <div class="text-center">
                         <div class="team-img">
-                            <img alt="" class="object-fit" src
-                                style="width: 210px;height:210px;object-fit: cover;"="../front/images/event/l3-4.png">
+                            <img alt="" class="object-fit" src="../front/images/event/l3-4.png"
+                                style="width: 210px;height:210px;object-fit: cover;">
                             <div class="overlay"></div>
                             <div class="social">
                                 <ul>
@@ -1111,75 +1111,4 @@
         </div>
     </section>
     <!--blog section end-->
-
-    <!--contact section start-->
-    <footer class="event contact set-relative bg bg-img bg-about p-b-0" id="contact">
-        <div class="container p-b-150">
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <div class="title title3">
-                        <div class="main-title">
-                            <h2 class=" text-white">Contact Us</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5 offset-xl-1 col-md-6 p-r-0 map">
-                    <div class="iframe-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63188.13033977106!2d113.66835714537842!3d-8.176728543344032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd694039f257609%3A0xf79a03b5dca1bed6!2sPerusahaan%20Daerah%20Perkebunan!5e0!3m2!1sen!2sid!4v1654831630669!5m2!1sen!2sid"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe><iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63188.13033977106!2d113.66835714537842!3d-8.176728543344032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd694039f257609%3A0xf79a03b5dca1bed6!2sPerusahaan%20Daerah%20Perkebunan!5e0!3m2!1sen!2sid!4v1654831630669!5m2!1sen!2sid"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe><iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63188.13033977106!2d113.66835714537842!3d-8.176728543344032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd694039f257609%3A0xf79a03b5dca1bed6!2sPerusahaan%20Daerah%20Perkebunan!5e0!3m2!1sen!2sid!4v1654831630669!5m2!1sen!2sid"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-                <div class="col-xl-5 p-l-0 col-md-6 set-z-index form-footer">
-                    <div class="bg-white">
-
-                        <form>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="name">Name *</label>
-                                        <input class="form-control" id="name" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="Phone">Phone *</label>
-                                        <input class="form-control" id="Phone" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="Email">Email *</label>
-                                        <input class="form-control" id="Email" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="Subject">Subject *</label>
-                                        <input class="form-control" id="Subject" type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="Message">Message *</label>
-                                <input class="form-control" id="Message" type="text">
-                            </div>
-
-                            <a class="btn btn-default primary-btn m-0-auto">send</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img alt="" class="set-abs top-0 plane2" src="../front/images/event/footer/2.png">
-        <img alt="" class="set-abs bottom-0 plane" src="../front/images/event/footer/1.png">
-    </footer>
-    <!--contact section end-->
 @endsection

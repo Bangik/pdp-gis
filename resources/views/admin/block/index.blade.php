@@ -8,13 +8,13 @@
 @section('content-admin')
 <section class="section">
     <div class="section-header">
-        <h1>Farm Management</h1>
+        <h1>Block Management</h1>
     </div>
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12 col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>List Kebun</h4>
+                    <h4>List Blok</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -22,23 +22,31 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Nama Blok</th>
+                                    <th>Nama Afdeling</th>
                                     <th>Nama Kebun</th>
-                                    <th>Nama Komoditi</th>
+                                    <th>Deskripsi</th>
+                                    <th>Lat</th>
+                                    <th>Long</th>
+                                    <th>Elevasi</th>
                                     <th>Luas</th>
-                                    <th>Warna</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($dataCommodities as $dataCommodity)
+                                @foreach ($dataBlocks as $dataBlock)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$dataCommodity->farm->name}}</td>
-                                        <td>{{$dataCommodity->name}}</td>
-                                        <td>{{$dataCommodity->area}}</td>
-                                        <td><div style="background-color: {{$dataCommodity->color}};">{{$dataCommodity->color}}</div></td>
+                                        <td>{{$dataBlock->name}}</td>
+                                        <td>{{$dataBlock->section->name}}</td>
+                                        <td>{{$dataBlock->section->farm->name}}</td>
+                                        <td>{{Str::limit($dataBlock->description, 20)}}</td>
+                                        <td>{{$dataBlock->latitude}}</td>
+                                        <td>{{$dataBlock->longitude}}</td>
+                                        <td>{{$dataBlock->elevation}}</td>
+                                        <td>{{$dataBlock->area}}</td>
                                         <td>
-                                            <a href="{{route('commodity.edit', ['id' => $dataCommodity->id])}}" class="btn btn-warning">Ubah</a>
+                                            <a href="{{route('block.edit', ['id' => $dataBlock->id])}}" class="btn btn-warning">Ubah</a>
                                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-hapus-{{$loop->iteration}}">Hapus</button>
                                         </td>
                                     </tr>
@@ -55,7 +63,7 @@
         <div class="col-lg-12 col-md-12 col-12 col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Tampilan Kebun Pada Peta</h4>
+                    <h4>Tampilan Blok Pada Peta</h4>
                 </div>
                 <div class="card-body">
                     <div id="map" style="width: 100%; height: 400px;"></div>
@@ -65,7 +73,7 @@
     </div>
 </section>
 
-@foreach ($dataCommodities as $dataCommodity)
+@foreach ($dataBlocks as $dataBlock)
     <div class="modal fade" tabindex="-1" role="dialog" id="modal-hapus-{{$loop->iteration}}" aria-labelledby="modal-ubah" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -76,10 +84,10 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Apakah anda yakin untuk menghapus kebun {{$dataCommodity->name}}</p>
+                <p>Apakah anda yakin untuk menghapus blok {{$dataBlock->name}}</p>
             </div>
             <div class="modal-footer bg-whitesmoke br">
-                <a href="{{route('commodity.delete', ['id' => $dataCommodity->id])}}" class="btn btn-danger">Ya</a>
+                <a href="{{route('block.delete', ['id' => $dataBlock->id])}}" class="btn btn-danger">Ya</a>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
             </div>
             </div>
@@ -96,9 +104,8 @@
     <script>
         $(document).ready(function() {
             $('#dataTable').DataTable({
-                "order": [[ 1, "asc" ]],
                 "rowGroup" : {
-                    "dataSrc": 1
+                    "dataSrc": 2
                 }
             });
         });
@@ -154,16 +161,32 @@
 
         @endforeach
 
-        @foreach ($dataCommodities as $dataCommodity)
-            L.geoJSON(<?= $dataCommodity->geojson_data ?>,{
-                style: {
-                    color: 'white',
-                    fillColor: '{{$dataCommodity->color}}',
-                    fillOpacity: 0.5,
-                }
-            }).addTo(map).bindPopup("{{$dataCommodity->name}}");
-
+        @foreach ($dataSections as $dataSection)
+            @if ($dataSection->geojson_data != null && $dataSection->geojson_data != '')
+                L.geoJSON(<?= $dataSection->geojson_data ?>,{
+                    style: {
+                        color: 'white',
+                        fillColor: '{{$dataSection->color}}',
+                        fillOpacity: 0.5,
+                    }
+                }).addTo(map).bindPopup("{{$dataSection->name}}");
+            @endif
         @endforeach
 
+        let popupContent = "";
+        @foreach ($dataBlocks as $dataBlock)
+            @if ($dataBlock->latitude != null && $dataBlock->latitude != '' && $dataBlock->longitude != null && $dataBlock->longitude != '')
+            popupContent = `
+            <b>{{$dataBlock->name}}</b><br>
+            {{$dataBlock->section->name}} <br>
+            Luas {{$dataBlock->area}} Ha<br>
+            Ketinggian {{$dataBlock->elevation}} MDPL <br>
+            Deskripsi {{Str::limit($dataBlock->description, 10)}}`;
+
+            L.marker([<?= $dataBlock->latitude ?>, <?= $dataBlock->longitude ?>]).addTo(map)
+            .bindPopup(popupContent)
+            .openPopup();
+            @endif
+        @endforeach
     </script>
 @endsection

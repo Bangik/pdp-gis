@@ -53,7 +53,7 @@
         <div class="col-lg-12 col-md-12 col-12 col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Gambar Komoditi pada peta kebun</h4>
+                    <h4>Gambar Afdeling pada peta kebun</h4>
                 </div>
                 <div class="card-body">
                     <div id="map" style="width: 100%; height: 400px;"></div>
@@ -68,22 +68,22 @@
         <div class="col-lg-12 col-md-12 col-12 col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Data Komoditi</h4>
+                    <h4>Data Afdeling</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('commodity.store')}}" method="POST">
+                    <form action="{{route('section.update', ['id' => $dataSection->id])}}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="name_farm">Nama Kebun</label> <small class="text-danger">*</small>
                             <select name="farm_id" id="name_farm" class="form-control">
                                 @foreach ($dataFarms as $dataFarm)
-                                    <option value="{{$dataFarm->id}}">{{$dataFarm->name}}</option>
+                                    <option value="{{$dataFarm->id}}" {{$dataFarm->id == $dataSection->farm_id ? 'selected' : ''}}>{{$dataFarm->name}}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="name">Nama Komoditi</label> <small class="text-danger">*</small>
-                            <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror">
+                            <label for="name">Nama Afdeling</label> <small class="text-danger">*</small>
+                            <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{$dataSection->name}}">
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -92,7 +92,7 @@
                         </div>
                         <div class="form-group">
                             <label for="area">Luas</label> <small class="text-danger">*</small>
-                            <input type="number" name="area" id="area" class="form-control @error('area') is-invalid @enderror">
+                            <input type="number" name="area" id="area" class="form-control @error('area') is-invalid @enderror" value="{{$dataSection->area}}">
                             @error('area')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -100,7 +100,34 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="geojson-data">GeoJSON Data</label> <small class="text-danger">*</small>
+                            <label for="latitude">Koordinat Latitude</label>
+                            <input type="number" name="latitude" id="latitude" class="form-control @error('latitude') is-invalid @enderror" value="{{$dataSection->latitude}}">
+                            @error('latitude')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="longitude">Koordinat Longitude</label>
+                            <input type="number" name="longitude" id="longitude" class="form-control @error('longitude') is-invalid @enderror" value="{{$dataSection->longitude}}">
+                            @error('longitude')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="elevation">Elevasi / Ketinggian</label>
+                            <input type="number" name="elevation" id="elevation" class="form-control @error('elevation') is-invalid @enderror" value="{{$dataSection->elevation}}">
+                            @error('elevation')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="geojson-data">GeoJSON Data</label>
                             <textarea name="geojson_data" id="geojson-data" class="form-control @error('geojson_data') is-invalid @enderror" rows="3"></textarea>
                             @error('geojson_data')
                                 <span class="invalid-feedback" role="alert">
@@ -111,7 +138,7 @@
                         <div class="form-group">
                             <div id="cp">
                                 <label for="color">Warna</label> <small class="text-danger">*</small>
-                                <input type="text" name="color" id="color" class="form-control @error('color') is-invalid @enderror">
+                                <input type="text" name="color" id="color" class="form-control @error('color') is-invalid @enderror" value="{{$dataSection->color}}">
                                 @error('color')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -120,7 +147,7 @@
                             </div>                       
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Tambah</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </form>
                 </div>
@@ -254,7 +281,7 @@ $(function () {
     @endforeach
 
     // FeatureGroup is to store editable layers
-    var drawnItems = new L.FeatureGroup();
+    var drawnItems = L.geoJSON(<?= $dataSection->geojson_data ?>).addTo(map);
     map.addLayer(drawnItems);
     var drawControl = new L.Control.Draw({
         edit: {

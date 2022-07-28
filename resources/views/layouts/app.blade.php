@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Favicon -->
+    <link href="{{ asset('front/images/logo/favicon.png') }}" rel=" shortcut icon">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -85,11 +88,18 @@
                                 <li class="{{Str::contains(Request::fullUrl(), 'farm/create') ? 'active' : ''}}"><a class="nav-link" href="{{route('farm.create')}}">Tambah Kebun</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown {{Str::contains(Request::fullUrl(), 'commodity') ? 'active' : ''}}">
-                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-map-marker-alt"></i> <span>Commodity Management</span></a>
+                        <li class="nav-item dropdown {{Str::contains(Request::fullUrl(), 'section') ? 'active' : ''}}">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-map-marker-alt"></i> <span>Afdeling Management</span></a>
                             <ul class="dropdown-menu">
-                                <li class="{{Str::contains(Request::fullUrl(), 'commodity/index') ? 'active' : ''}}"><a class="nav-link" href="{{route('commodity.index')}}">List Komoditi</a></li>
-                                <li class="{{Str::contains(Request::fullUrl(), 'commodity/create') ? 'active' : ''}}"><a class="nav-link" href="{{route('commodity.create')}}">Tambah Komoditi</a></li>
+                                <li class="{{Str::contains(Request::fullUrl(), 'section/index') ? 'active' : ''}}"><a class="nav-link" href="{{route('section.index')}}">List Afdeling</a></li>
+                                <li class="{{Str::contains(Request::fullUrl(), 'section/create') ? 'active' : ''}}"><a class="nav-link" href="{{route('section.create')}}">Tambah Afdeling</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown {{Str::contains(Request::fullUrl(), 'block') ? 'active' : ''}}">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-map-marker-alt"></i> <span>Block Management</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="{{Str::contains(Request::fullUrl(), 'block/index') ? 'active' : ''}}"><a class="nav-link" href="{{route('block.index')}}">List Blok</a></li>
+                                <li class="{{Str::contains(Request::fullUrl(), 'block/create') ? 'active' : ''}}"><a class="nav-link" href="{{route('block.create')}}">Tambah Blok</a></li>
                             </ul>
                         </li>
                     </ul>
