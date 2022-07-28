@@ -87,13 +87,13 @@
                                         <li><a href="{{route('about.history')}}">Sejarah Perusahaan</a>
                                         </li>
 
-                                        <li><a href="#">Profil Perusahaan</a>
+                                        <li><a href="{{route('about.profile')}}">Profil Perusahaan</a>
                                         </li>
 
-                                        <li><a href="#">Visi dan Misi</a>
+                                        <li><a href="{{route('about.visionMission')}}">Visi dan Misi</a>
                                         </li>
 
-                                        <li><a href="#">Struktur Organisasi</a>
+                                        <li><a href="{{route('about.organizationStructure')}}">Struktur Organisasi</a>
                                         </li>
                                     </ul>
                                 </li>

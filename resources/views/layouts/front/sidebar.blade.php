@@ -20,12 +20,12 @@
                         </a>
                     </li>
                     <li class="d-flex">
-                        <a href="#">
+                        <a href="{{route('about.visionMission')}}">
                             <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>Visi dan Misi
                         </a>
                     </li>
                     <li class="d-flex">
-                        <a href="#">
+                        <a href="{{route('about.organizationStructure')}}">
                             <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>Struktur Organisasi
                         </a>
                     </li>

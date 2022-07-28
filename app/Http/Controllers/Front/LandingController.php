@@ -48,4 +48,14 @@ class LandingController extends Controller
     {
         return view('front.profile');
     }
+
+    public function visionMission()
+    {
+        return view('front.visionMission');
+    }
+
+    public function organizationStructure()
+    {
+        return view('front.organizationStructure');
+    }
 }

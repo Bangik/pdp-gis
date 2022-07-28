@@ -23,6 +23,9 @@ Route::get('/', [LandingController::class, 'index'])->name('landing');
 Route::get('/tentang-kami', [LandingController::class, 'about'])->name('about.me');
 Route::get('/tentang-kami/sejarah-perusahaan', [LandingController::class, 'history'])->name('about.history');
 Route::get('/tentang-kami/profil-perusahaan', [LandingController::class, 'profile'])->name('about.profile');
+Route::get('/tentang-kami/visi-misi', [LandingController::class, 'visionMission'])->name('about.visionMission');
+Route::get('/tentang-kami/struktur-organisasi', [LandingController::class, 'organizationStructure'])->name('about.organizationStructure');
+
 Route::get('/map-leaflet', [LandingController::class, 'viewLeaflet'])->name('view.leaflet');
 Route::get('/map-google', [LandingController::class, 'viewGoogle'])->name('view.google');
 

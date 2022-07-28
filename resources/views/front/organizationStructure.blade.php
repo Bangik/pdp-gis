@@ -5,12 +5,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="breadcrumb-text text-center">Profil Perusahaan</h2>
+                <h2 class="breadcrumb-text text-center">Struktur Organisasi Perusahaan</h2>
                 <ul class="breadcrumb justify-content-center">
 
                     <li><a href="{{route('landing')}}">beranda</a></li>
                     <li><a href="{{route('about.me')}}">tentang kami</a></li>
-                    <li>profil perusahaan</li>
+                    <li>Struktur Organisasi perusahaan</li>
                 </ul>
             </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-lg-9 order-lg-2">
                 <div class="blog-text">
-                    <h3 class="blog-head">Profil Perusahaan Daerah Perkebunan Kabupaten Jember</h3></a>
+                    <h3 class="blog-head">Struktur Organisasi Perusahaan Daerah Perkebunan Kabupaten Jember</h3></a>
                     <div class="blog-divider"></div>
                     <div class="blog-description">
                         <p>
