@@ -296,7 +296,7 @@
                 <div class="col-md-3 col-sm-6 speker-container">
                     <div class="text-center">
                         <div class="team-img">
-                            <img alt="" class="object-fit" src="../front/images/event/l3-4.png"
+                            <img alt="" class="object-fit" src="https://i0.wp.com/www.perhutani.co.id/wp-content/uploads/2022/03/tebu.webp"
                                 style="width: 210px;height:210px;object-fit: cover;">
                             <div class="overlay"></div>
                             <div class="social">
@@ -309,8 +309,8 @@
                             </div>
                         </div>
                         <div class="employee">
-                            <h5 class="e-name text-center">Sam Rowling</h5>
-                            <h6 class="post text-center ">Team Leader - otstrab</h6>
+                            <h5 class="e-name text-center">Tebu</h5>
+                            {{-- <h6 class="post text-center ">Team Leader - otstrab</h6> --}}
                         </div>
                     </div>\
                 </div>
@@ -320,13 +320,13 @@
     <!--speaker section end-->
 
     <!--sponsor section start-->
-    <section class="event sponsor set-relative bg bg-img2 bg-about">
+    <section class="event sponsor bg bg-img2 bg-about">
         <div class="container set-margin">
             <div class="row">
                 <div class="col-md-10 offset-md-1">
                     <div class="title title3">
                         <div class="main-title">
-                            <h2 class=" text-white">sponsor</h2>
+                            <h2 class=" text-white">Peta Persebaran Kebun PDP Jember</h2>
                         </div>
                         <div class="sub-title">
                             <P class="text-white">Register now and reserve your seat for this
@@ -340,66 +340,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/1.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/2.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/3.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/4.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/5.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/6.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/7.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/8.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/9.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/10.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/11.png"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-6 sponsor-img">
-                    <div class="text-center">
-                        <a href="#"><img alt="" class="img-fluid" src="../front/images/event/sponsor/12.png"></a>
-                    </div>
-                </div>
+            </div>
+            <div class="position-sticky">
+                <div id="map" style="width: 100%; height: 500px;"></div>
             </div>
         </div>
     </section>
@@ -665,7 +608,7 @@
     <!--testimonial section end-->
 
     <!--gallery section start-->
-    <section class="event portfolio-section zoom-gallery set-relative">
+    {{-- <section class="event portfolio-section zoom-gallery set-relative">
         <div class="circle">
         </div>
         <div class="container">
@@ -765,11 +708,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--gallery section end-->
 
     <!--counter section start-->
-    <section class="event counter set-relative bg bg-img3 bg-about">
+    {{-- <section class="event counter set-relative bg bg-img3 bg-about">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-6 counter-container">
@@ -810,11 +753,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--counter section end-->
 
     <!--subscribe section start-->
-    <section class="event subscribe subscribe-3 set-relative">
+    {{-- <section class="event subscribe subscribe-3 set-relative">
         <div class="circle">
         </div>
         <div class="container">
@@ -852,11 +795,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--subscribe section end-->
 
     <!--pricing section start-->
-    <section class="event pricing set-relative bg bg-img bg-about">
+    {{-- <section class="event pricing set-relative bg bg-img bg-about">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 offset-md-1">
@@ -950,7 +893,7 @@
             </div>
         </div>
     </section>
-    <!--pricing section end-->
+    <!--pricing section end--> --}}
 
     <!--blog section start-->
     <section class="event blog set-relative">
@@ -1111,4 +1054,103 @@
         </div>
     </section>
     <!--blog section end-->
+@endsection
+
+@section('scripts')
+<script>
+    var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11'
+        });
+
+    var peta2 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/satellite-v9'
+        });
+
+
+    var peta3 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+    var peta4 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/dark-v10'
+        });
+
+    @foreach ($dataFarms as $dataFarm)
+        var dataKebun{{$dataFarm->id}} = L.layerGroup();
+    @endforeach
+    
+    var map = L.map('map', {
+        center: [-8.094745502497549, 113.49720041808277],
+        zoom: 12,
+        layers: [peta1,
+            @foreach ($dataFarms as $dataFarm)
+                dataKebun{{$dataFarm->id}},
+            @endforeach
+        ]
+    });
+
+    var baseMaps = {
+        "Grayscale": peta1,
+        "Satellite": peta2,
+        "Streets": peta3,
+        "dark": peta4,
+    };
+
+    var overlayer = {
+        @foreach ($dataFarms as $dataFarm)
+            "{{$dataFarm->name}}": dataKebun{{$dataFarm->id}},
+        @endforeach
+    };
+
+    L.control.layers(baseMaps, overlayer).addTo(map); 
+
+    @foreach ($dataFarms as $dataFarm)
+        L.geoJSON(<?= $dataFarm->geojson_data ?>,{
+            style: {
+                color: 'white',
+                fillColor: '{{$dataFarm->color}}',
+                fillOpacity: 0.5,
+            }
+        }).addTo(dataKebun{{$dataFarm->id}}).bindPopup("{{$dataFarm->name}}");
+
+    @endforeach
+    
+    @foreach ($dataSections as $dataSection)
+        @if ($dataSection->geojson_data != null && $dataSection->geojson_data != '')
+            L.geoJSON(<?= $dataSection->geojson_data ?>,{
+                style: {
+                    color: 'white',
+                    fillColor: '{{$dataSection->color}}',
+                    fillOpacity: 0.5,
+                }
+            }).addTo(map).bindPopup("{{$dataSection->name}}");
+
+        @endif
+    @endforeach
+
+    let popupContent = "";
+    @foreach ($dataBlocks as $dataBlock)
+        @if ($dataBlock->latitude != null && $dataBlock->latitude != '' && $dataBlock->longitude != null && $dataBlock->longitude != '')
+            popupContent = `
+            <b>{{$dataBlock->name}}</b><br>
+            {{$dataBlock->section->name}} <br>
+            Luas {{$dataBlock->area}} Ha<br>
+            Ketinggian {{$dataBlock->elevation}} MDPL <br>
+            Deskripsi {{Str::limit($dataBlock->description, 10)}}`;
+
+            L.marker([<?= $dataBlock->latitude ?>, <?= $dataBlock->longitude ?>]).addTo(map)
+            .bindPopup(popupContent)
+            .openPopup();
+        @endif
+    @endforeach
+</script>
 @endsection

@@ -13,10 +13,11 @@ class LandingController extends Controller
 
     public function index()
     {
-        // $dataFarms = Farm::all();
-        // $dataSections = Section::all();
+        $dataFarms = Farm::all();
+        $dataSections = Section::all();
+        $dataBlocks = Block::all();
 
-        return view('front.index');
+        return view('front.index', compact('dataFarms', 'dataSections', 'dataBlocks'));
     }
 
     public function viewGoogle()
@@ -36,26 +37,26 @@ class LandingController extends Controller
 
     public function about()
     {
-        return view('front.about');
+        return view('front.about.about');
     }
 
     public function history()
     {
-        return view('front.history');
+        return view('front.about.history');
     }
 
     public function profile()
     {
-        return view('front.profile');
+        return view('front.about.profile');
     }
 
     public function visionMission()
     {
-        return view('front.visionMission');
+        return view('front.about.visionMission');
     }
 
     public function organizationStructure()
     {
-        return view('front.organizationStructure');
+        return view('front.about.organizationStructure');
     }
 }

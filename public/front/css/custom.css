@@ -14,7 +14,7 @@
 }
 
 .breadcrumb-section:not(.breadcrumb-left),.breadcrumb-section:not(.breadcrumb-right),.breadcrumb-section:not(.breadcrumb-slider){
-    background:url('../images/event/breadcrumb.jpg') !important;
+    background:url('https://www.kopibalikintamani.com/wp-content/uploads/2016/06/P_20160531_093716-e1464775673969.jpg') !important;
     background-position:center !important;
     background-size:cover !important;
     background-blend-mode:overlay !important;
@@ -22,4 +22,20 @@
 
 .single_blog_item .blog-text .blog-head {
     margin-top: 0px !important;
+}
+
+.breadcrumb-section .breadcrumb-text{
+    color: #fff !important;
+}
+
+.breadcrumb-section .breadcrumb li+li:before {
+    color: #fff !important;
+}
+
+.breadcrumb-section .breadcrumb li {
+    color: #fff !important;
+}
+
+.breadcrumb-section .breadcrumb li a {
+    color: #fff !important;
 }

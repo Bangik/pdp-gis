@@ -26,6 +26,42 @@ Route::get('/tentang-kami/profil-perusahaan', [LandingController::class, 'profil
 Route::get('/tentang-kami/visi-misi', [LandingController::class, 'visionMission'])->name('about.visionMission');
 Route::get('/tentang-kami/struktur-organisasi', [LandingController::class, 'organizationStructure'])->name('about.organizationStructure');
 
+Route::get('/informasi/berita', function(){
+    return view('front.information.news');
+})->name('information.news');
+Route::get('/informasi/pengumuman', function(){
+    return view('front.information.anounc');
+})->name('information.anounc');
+
+Route::get('/unit-bisnis/tebu', function(){
+    $data = ['title' => 'tebu', 'image' => 'https://i0.wp.com/www.perhutani.co.id/wp-content/uploads/2022/03/tebu.webp'];
+    return view('front.bussiness.index', compact('data'));
+})->name('bussiness.tebu');
+Route::get('/unit-bisnis/kopi', function(){
+    $data = ['title' => 'kopi', 'image' => 'https://www.goodnewsfromindonesia.id/uploads/post/large-shutterstock-582329227-3d26e73af7a09a663014a4d85b68f5bd.jpg'];
+    return view('front.bussiness.index', compact('data'));
+})->name('bussiness.kopi');
+Route::get('/unit-bisnis/karet', function(){
+    $data = ['title' => 'karet', 'image' => 'https://ajaib-wp-s3-artifact.s3.ap-southeast-1.amazonaws.com/img/2021/09/22010607/prospek-usaha-karet-1024x576.jpg'];
+    return view('front.bussiness.index', compact('data'));
+})->name('bussiness.karet');
+Route::get('/unit-bisnis/cengkeh', function(){
+    $data = ['title' => 'cengkeh', 'image' => 'https://akcdn.detik.net.id/visual/2022/01/14/ilustrasi-cengkeh_169.jpeg?w=650'];
+    return view('front.bussiness.index', compact('data'));
+})->name('bussiness.cengkeh');
+
+Route::get('/laporan/tahunan', function(){
+    return view('front.report.yearly');
+})->name('report.yearly');
+
+Route::get('/laporan/audit', function(){
+    return view('front.report.audited');
+})->name('report.audit');
+
+Route::get('/laporan/keuangan', function(){
+    return view('front.report.money');
+})->name('report.keuangan');
+
 Route::get('/map-leaflet', [LandingController::class, 'viewLeaflet'])->name('view.leaflet');
 Route::get('/map-google', [LandingController::class, 'viewGoogle'])->name('view.google');
 
